@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAMC,AAAA,MAAM,CAAE;EALL,gBAAgB,EAAE,OAAO;EACzB,MAAM,EAKY,GAAG,CALN,KAAK,CAAC,KAAK;EAC1B,KAAK,EAAE,KAAK;CAKd",
+    "sources": [
+        "mixindemo.scss"
+    ],
+    "names": [],
+    "file": "mixindemo.css"
+}

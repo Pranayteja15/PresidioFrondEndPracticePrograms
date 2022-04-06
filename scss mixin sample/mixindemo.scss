@@ -1,0 +1,9 @@
+@mixin bordered($width) {
+    background-color: #77C1EF;
+    border: $width solid black;
+    width: 450px;
+ }
+ 
+ .style  {
+    @include bordered(2px);
+ }
