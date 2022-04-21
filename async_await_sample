@@ -1,0 +1,62 @@
+let myPromise = new Promise(function(myResolve, myReject) {
+    myResolve("Two");
+})
+myPromise.then(function(result){
+    console.log(result);
+})
+
+async function abc() {
+    await myPromise;
+    console.log("Three");
+}
+abc().then(
+function (value) {console.log(value);},
+function (err) {console.log(err);}
+);
+
+
+console.log("One");
+
+abc();
+
+
+2nd example
+
+
+let makeCake = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("Make the cake"))
+  },5000);
+  makeCake.then(function(result1){
+    console.log(result1);
+})
+
+let makeBurger = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("Make the Burger"))
+  },10000);
+  makeBurger.then(function(result1){
+    console.log(result1);
+})
+async function burgerFunction(){
+  let buyBurger = await makeBurger;
+    console.log("Burger ready");
+    let result =  await buyBurger;
+    console.log("Bought the Burger.Promise fulfilled.");
+     console.log('Eat the Burger');
+}
+ async function cakeFunction() {
+  
+  try{
+    let buyCake = await makeCake;
+    console.log("Cake ready");
+    let result =  await buyCake;
+    console.log("Bought the cake.Promise fulfilled.")
+  }
+  catch{
+    console.log("error");
+  }
+  
+  console.log('Eat the cake');
+}
+
+cakeFunction();
+burgerFunction();
